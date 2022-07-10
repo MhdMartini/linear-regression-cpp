@@ -8,6 +8,8 @@ class LinearRegression
 {
 public:
     std::string name = "LinearRegression";
+    std::vector<std::vector<double>> w;
+    double b;
 
 public:
     LinearRegression();
@@ -15,7 +17,7 @@ public:
     ~LinearRegression();
 
 public:
-    LinearRegression &fit(std::vector<std::vector<double>> X, std::vector<double> y, int epochs = 1000);
+    LinearRegression &fit(std::vector<std::vector<double>> X, std::vector<std::vector<double>> y, double lr = 0.01, int epochs = 1000);
 };
 
 // #endif // LINEARREGRESSION_H
